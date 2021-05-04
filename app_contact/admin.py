@@ -10,7 +10,7 @@ class AddressInline(admin.StackedInline):
 
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ['name', 'type']
+    list_display = ['__str__', 'type']
     list_filter = ['type']
     search_fields = ['name', 'first_name']
     inlines = [AddressInline]
