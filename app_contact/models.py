@@ -17,3 +17,5 @@ class Address(models.Model):
     zip = models.CharField(max_length=10)
     city = models.CharField(max_length=256)
     country = models.CharField(max_length=2)
+
+    contact = models.ForeignKey('Contact', on_delete=models.CASCADE, related_name='addresses')
